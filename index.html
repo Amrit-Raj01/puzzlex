@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle Game</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-animation"></div>
     <div class="container">
         <h1>Puzzle Game</h1>
         <div class="levels">
@@ -18,11 +16,12 @@
         </div>
         <div id="game" class="hidden">
             <p id="scrambled-word"></p>
-            <div id="letters-container"></div>
+            <input type="text" id="user-input" placeholder="Type your answer">
             <button id="submit-btn">Submit</button>
             <p id="result"></p>
         </div>
     </div>
+    <canvas id="background"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
