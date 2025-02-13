@@ -5,56 +5,22 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #FFB6C1, #FF69B4);
+    font-family: Arial, sans-serif;
+    background-color: #FFB6C1; /* Pink background */
     color: #333;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.background-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1) 10px,
-        transparent 10px,
-        transparent 20px
-    );
-    z-index: 0;
-    animation: slide 10s linear infinite;
-}
-
-@keyframes slide {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 400px 400px;
-    }
 }
 
 .container {
     position: relative;
     z-index: 1;
     text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #FF69B4;
 }
 
 .levels {
@@ -70,14 +36,13 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green */
     color: white;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #45a049;
-    transform: translateY(-2px);
 }
 
 #game {
@@ -88,52 +53,33 @@ button:hover {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #333;
 }
 
-#letters-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.letter {
+#user-input {
     padding: 10px;
-    font-size: 1.5rem;
-    background-color: white;
-    border: 2px solid #333;
-    border-radius: 5px;
-    cursor: grab;
-    user-select: none;
-    transition: transform 0.2s;
-}
-
-.letter:hover {
-    transform: scale(1.1);
+    font-size: 1.2rem;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 #submit-btn {
     padding: 10px 20px;
     font-size: 1.2rem;
     cursor: pointer;
-    background-color: #FF69B4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-#submit-btn:hover {
-    background-color: #FF1493;
 }
 
 #result {
     font-size: 1.5rem;
     margin-top: 20px;
-    color: #4CAF50;
 }
 
 .hidden {
     display: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
