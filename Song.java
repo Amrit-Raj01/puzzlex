@@ -1,11 +1,25 @@
 package model;
 
 public class Song {
-    private final String title;
-    private final String singer;
-    private final String movie;
-    private final String mood;
-    
-    // Constructor + Getters
-    // toString() implementation
+    private String title;
+    private String artist;
+    private String mood;
+
+    public Song(String title, String artist, String mood) {
+        this.title = title;
+        this.artist = artist;
+        this.mood = mood;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public String getMood() {
+        return mood;
+    }
 }
